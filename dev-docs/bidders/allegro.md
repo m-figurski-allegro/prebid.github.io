@@ -3,13 +3,12 @@ layout: bidder
 title: Allegro
 description: Allegro Prebid Bidder Adapter
 biddercode: allegro
-media_types: banner
+media_types: banner, video, native
 pbjs: true
 pbs: false
 schain_supported: true
 tcfeu_supported: true
 usp_supported: true
-coppa_supported: true
 floors_supported: true
 fpd_supported: true
 userIds: all
@@ -50,11 +49,9 @@ pbjs.setConfig({
 ### What It Does
 
 1. Builds standard OpenRTB banner requests.
-2. (Optional) Renames common `ext` objects to DoubleClick-style fields for downstream systems.
+2. (Optional) Renames common `ext` objects to DoubleClick-style extension proto fields for downstream systems.
 3. Converts numeric flags (`dnt`, `sua.mobile`, `test`, etc.) to booleans.
-4. On bid win (if enabled) fires `burl` after macro substitution.
-
-Supported macros in `burl`: `${AUCTION_ID}`, `${AUCTION_BID_ID}`, `${AUCTION_BID_IMP_ID}`, `${AUCTION_SEAT_ID}`, `${AUCTION_AD_ID}`, `${AUCTION_PRICE}`, `${CURRENCY}`, `${CREATIVE_ID}`, `${ADUNIT_CODE}`.
+4. On bid win (if enabled) fires `burl`.
 
 ### Contact
 
